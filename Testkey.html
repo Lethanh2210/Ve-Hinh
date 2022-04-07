@@ -6,19 +6,28 @@
 </head>
 <body>
 <script>
-    let a = ['bcde','bcde','bcde']
-    let k = 1;
-    for (let i = 0; i < a.length +2; i++) {
-        document.write('</br>')
-        for (let j = 0; j < a[0].length+2; j++) {
-            if(j==1 && i==k && k <= a.length){
-                document.write(a[k-1]);
-                j = a[k-1].length;
-                k++;
-            }else document.write('*');
+    function baoQuangArr(arr){
+        // let a = ['bcde','bcde','bcde','bcde']
+        let k = 1;
+        for (let i = 0; i < arr.length +2; i++) {
+            document.write('</br>')
+            for (let j = 0; j < arr[0].length+2; j++) {
+                if(j==1 && i==k && k <= arr.length){
+                    document.write(arr[k-1]);
+                    j = arr[k-1].length;
+                    k++;
+                }else document.write('*');
 
+            }
         }
     }
+    let arr = [];
+    let n = +prompt('nhap so luong phan tu');
+    for (let i = 0; i < n; i++) {
+        arr[i] = prompt(`nhap chuoi ${i}`)
+    }
+    baoQuangArr(arr);
+
 
 </script>
 </body>
